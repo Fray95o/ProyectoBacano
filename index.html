@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Biblioteca El Saber: un espacio para aprender, descubrir y disfrutar de los libros.">
+    <title>Biblioteca El Saber</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="menu">
+        <div class="logo">📚 Biblioteca El Saber</div>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#biblioteca">Biblioteca digital</a></li>
+            <li><a href="#libros">Libros</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#audio">Audiolibro</a></li>
+            <li><a href="#nosotros">Sobre nosotros</a></li>
+        </ul>
+    </nav>
+
+    <!-- ENCABEZADO -->
+    <header id="inicio">
+        <h1>📚 Biblioteca El Saber</h1>
+        <p>Un lugar para aprender, descubrir y disfrutar de los libros</p>
+    </header>
+
+    <main class="contenido">
+        <section class="seccion" id="bienvenida">
+            <h2>Bienvenidos</h2>
+            <p>Nuestra biblioteca es un espacio dedicado a la lectura, el conocimiento y la cultura.</p>
+        </section>
+
+        <section class="seccion" id="biblioteca">
+            <h2>📖 Biblioteca digital</h2>
+            <p>Agrega libros y permite que los visitantes puedan conocerlos y leerlos.</p>
+            <button type="button" id="mostrarFormularioBtn">➕ Agregar libro</button>
+        </section>
+
+        <!-- FORMULARIO -->
+        <section class="seccion formulario" id="formulario" hidden>
+            <h2>Agregar un libro</h2>
+            <form id="formularioLibro">
+                <label for="nombreLibro">Nombre del libro</label>
+                <input type="text" id="nombreLibro" placeholder="Nombre del libro" required maxlength="150">
+
+                <label for="direccionLibro">Dirección del libro (por ejemplo: libros/Babilonia.pdf)</label>
+                <input type="text" id="direccionLibro" placeholder="libros/Babylonia.pdf" required maxlength="500">
+
+                <label for="descripcionLibro">¿De qué trata el libro?</label>
+                <textarea id="descripcionLibro" placeholder="Descripción del libro" required maxlength="2000"></textarea>
+
+                <div class="acciones-formulario">
+                    <button type="submit">Guardar libro</button>
+                    <button type="button" class="boton-secundario" id="cancelarFormularioBtn">Cancelar</button>
+                </div>
+            </form>
+            <p class="nota">Los libros agregados se guardan en este navegador. La dirección debe apuntar a un archivo que exista dentro del proyecto o a una dirección web válida.</p>
+        </section>
+
+        <!-- LIBROS AGREGADOS -->
+        <section class="seccion" id="libros">
+            <h2>📚 Libros disponibles</h2>
+            <div id="listaLibros" aria-live="polite">
+                <p class="mensaje-vacio">Todavía no hay libros agregados.</p>
+            </div>
+        </section>
+
+        <!-- GALERÍA -->
+        <section class="seccion galeria" id="galeria">
+            <h2>🖼️ Nuestra biblioteca</h2>
+            <div class="galeria-imagenes">
+                <img src="imagenes/images.jpg" alt="Interior de la biblioteca" loading="lazy">
+                <img src="imagenes/images (1).jpg" alt="Estantería de libros" loading="lazy">
+                <img src="imagenes/images (2).jpg" alt="Zona de lectura" loading="lazy">
+            </div>
+        </section>
+
+        <!-- VIDEO -->
+        <section class="seccion" id="video">
+            <h2>🎬 Video</h2>
+            <p>Mira un video relacionado con la lectura.</p>
+            <video controls preload="metadata">
+                <source src="videos/videoplayback.mp4" type="video/mp4">
+                Tu navegador no puede reproducir este video.
+            </video>
+        </section>
+
+        <!-- AUDIO -->
+        <section class="seccion" id="audio">
+            <h2>🎧 Audiolibro</h2>
+            <p>Escucha un fragmento de un audiolibro.</p>
+            <audio controls preload="metadata">
+                <source src="audio/Un día de estos, de Gabriel García Márquez (cuento corto) AUDIOLIBRO  Lectura  Voz humana.mp3" type="audio/mpeg">
+                Tu navegador no puede reproducir este audio.
+            </audio>
+        </section>
+
+        <!-- INFORMACIÓN -->
+        <section class="seccion" id="nosotros">
+            <h2>📚 Sobre nosotros</h2>
+            <p>Nuestra biblioteca busca fomentar el hábito de la lectura y facilitar el acceso al verdadero saber.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Biblioteca El Saber © 2026</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
